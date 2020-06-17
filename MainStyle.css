@@ -1,0 +1,26 @@
+* {
+    text-align: left;
+}
+h1 {
+    background-color: #EFFBF5;
+}
+div{
+    display:block;
+    height:100%;
+    padding: 20px;
+}
+#field1>*:not(button){
+    display:inline;
+    font-size: 30px;
+}
+table{
+    width: 100%;
+    table-layout: fixed;
+    word-break: break-all;
+    border-collapse: collapse;
+    border-top: 1px solid #999999;
+    border-left : 3px solid #369;
+}
+th,td {
+    border-bottom: 1px solid #999999;
+}
