@@ -8,7 +8,7 @@
     <div>실행을 누르고 아래 텍스트를 복사해서 카카오톡에 한글자씩 붙혀넣으세요.</div>
     <div>잘 안된다면 한글자씩만 변환해서 붙혀넣어보세요.</div>
     <div id="result_" contentEditable="true" style="border:1px solid black; width:70%;"></div>
-    <button id="copy" style="border-color: white; width:70%;" >복사</button>
+    <button id="copy" style="border-color: white; width:70%;" ></button>
     <script>
         (function () {
             document.getElementById("run").addEventListener("click",function(){run_().then(x=>document.getElementById("result_").innerHTML=x );});
