@@ -4,10 +4,10 @@
 <body>
     <h2>카카오톡 큰글자 변환기</h2>
     <p></p>
-    <div id="text_" contentEditable="true" placeholder="여기에 입력" style="border:1px solid black; width:70%; height:10%;"></div>
-    <button id="run" style="border-color: white; width:70%; height:10%;" >실행</button>
+    <div id="text_" contentEditable="true" placeholder="여기에 입력" style="border:1px solid black; width:50%; height:3%;"></div>
+    <button id="run" style="border-color: white; width:50%; height:5%;" >실행</button>
     <div height:10%;>실행을 누르고 아래 텍스트를 복사해서 카카오톡에 한글자씩 붙혀넣으세요.</div>
-    <div id="result_" contentEditable="true" style="border:1px solid black; width:70%; height:10%;"></div>
+    <div id="result_" contentEditable="true" style="border:1px solid black; width:50%; height:3%;"></div>
     <script>
         (function () {
             document.getElementById("run").addEventListener("click",function(){run_().then(x=>document.getElementById("result_").innerHTML=x );});
