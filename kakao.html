@@ -1,0 +1,27 @@
+<head>
+    <title>카카오톡 Big Char</title>
+</head>
+<body>
+    <div id="text_" contentEditable="true">여기에 입력</div>
+    <button id="run">실행</button>
+    <div id="result_" contentEditable="true"></div>
+    <script>
+        (function () {
+            document.getElementById("run").addEventListener("click",function(){run_().then(x=>document.getElementById("result_").innerHTML=x );});
+        }());
+        async function run_() {
+            let list = [];
+            for (var i of document.getElementById("text_").innerText) {
+                list.push(i.charCodeAt(0).toString(16));
+                list.push('200d');
+                list.push('200d')
+            }
+            let lists = "";
+            for (var i of list) {
+                lists += String.fromCharCode(parseInt(i, 16));
+            }
+            return lists;
+        }
+    </script>
+</body>
+
