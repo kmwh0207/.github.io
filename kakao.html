@@ -1,18 +1,19 @@
 <head>
     <title>카카오톡 Big Char</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 </head>
 <body>
     <h2>카카오톡 큰글자 변환기</h2>
-    <div id="text_" contentEditable="true" placeholder="여기에 입력" style="border:1px solid black; width:70%;"></div>
-    <button id="run" style="border-color: white; width:70%;" >실행</button>
+    <div id="text_" contentEditable="true" placeholder="여기에 입력" style="border:1px solid black; width:90%; height:5%;"></div>
+    <button id="run" style="border-color: white; width:90%; height:5%;" >실행</button>
     <div>실행을 누르고 아래 텍스트를 복사해서 카카오톡에 한글자씩 붙혀넣으세요.</div>
     <div>잘 안된다면 한글자씩만 변환해서 붙혀넣어보세요.</div>
-    <div id="result_" contentEditable="true" style="border:1px solid black; width:70%;"></div>
-    <button id="copy" style="border-color: white; width:70%;" ></button>
+    <div id="result_" contentEditable="true" style="border:1px solid black; width:90%; height:5%;">복사</div>
+    <button id="copy" style="border-color: white; width:90%; height:5%;" ></button>
     <script>
         (function () {
             document.getElementById("run").addEventListener("click",function(){run_().then(x=>document.getElementById("result_").innerHTML=x );});
-            document.getElementById("copy").addEventListener("click",function(){var textarea = document.createElement('textarea'); textarea.value=document.getElementById("result_").innerHTML; document.body.appendChild(textarea); document.getElementsByTagName("textarea")[0].select(); document.getElementsByTagName("textarea")[0].setSelectionRange(0, 9999); document.execCommand('copy'); document.body.removeChild(document.getElementsByTagName("textarea")[0]); console.log(textarea.value);});
+            document.getElementById("copy").addEventListener("click",function(){var textarea = document.createElement('textarea'); textarea.value=document.getElementById("result_").innerHTML; document.body.appendChild(textarea); textarea.select(); textarea.setSelectionRange(0, 9999); document.execCommand('copy'); document.body.removeChild(document.getElementsByTagName("textarea")[0]); console.log(textarea.value);});
         }());
         async function run_() {
             let list = [];
