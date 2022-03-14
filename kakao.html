@@ -19,7 +19,7 @@
         }());
         async function run_() {
             let list = []
-            list.push(document.getElementById("text_").innerText);
+            list.push(document.getElementById("text_").innerText.charCodeAt(0).toString(16));
             list.push('200d');
             list.push('200d');
 //             let list = [];
